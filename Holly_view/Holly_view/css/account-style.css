@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+body {
+	background: #181616;
+	font-family: "Roboto", sans-serif;
+}
+
+.shadow {
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.712) !important;
+}
+
+.profile-tab-nav {
+	min-width: 250px;
+}
+
+.tab-content {
+	flex: 1;
+}
+
+.form-group {
+	margin-bottom: 1.5rem;
+}
+
+.nav-pills a.nav-link {
+	padding: 15px 20px;
+	border-bottom: 1px solid #ddd;
+	border-radius: 0;
+	color: white;
+}
+.nav-pills a.nav-link i {
+	width: 20px;
+}
+
+.img-circle img {
+	height: 100px;
+	width: 100px;
+	border-radius: 100%;
+	border: 5px solid #fff;
+}
+#bbg-color{
+	background-color:#221f1f;
+}
+#b-btn-update{
+	background-color: #c0392b;
+	border: #221f1f ;
+}
+#b-btn-cancel{
+	border: #221f1f;
+	background-color: white;
+}
+#account-tab{
+    background-color:#221f1f;	
+}
+#account-tab:hover{
+	background-color: #c0392b;
+}
+#password-tab{
+    background-color:#221f1f;	
+}
+#password-tab:hover{
+	background-color: #c0392b;
+}
+#watchlist-tab{
+    background-color:#221f1f;	
+}
+#watchlist-tab:hover{
+	background-color: #c0392b;
+}
+#logout-tab{
+    background-color:#221f1f;	
+	border: none;
+}
+#logout-tab:hover{
+	background-color: #c0392b;
+}
+h1{
+	color: white;
+}
+h3{
+	color: white;
+}
+h4{
+	color: white
+}
+label{
+	color: white;
+}
