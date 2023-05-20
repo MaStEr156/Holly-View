@@ -1,0 +1,140 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="main.master.cs" Inherits="Holly_view.main" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <asp:ContentPlaceHolder ID="page_title" runat="server">
+        Profile
+    </asp:ContentPlaceHolder>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <!-- OWL CAROUSEL -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <!-- BOX ICONS -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <!-- APP CSS -->
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/home.css">
+    
+    <asp:ContentPlaceHolder ID="own_style" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+       <!-- NAV -->
+    <div class="nav-wrapper">
+        <div class="container">
+            <div class="nav">
+                <a href="Default.aspx" class="logo">
+                    <i class='bx bx-movie-play bx-tada main-color'></i><span class="main-color">H</span>olly <span class="main-color">V</span>iew
+                </a>
+                    
+
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="search_bulk">
+                        <asp:TextBox class="search_box" ID="search_box" placeholder="Search Movies" runat="server"></asp:TextBox>
+                        <asp:LinkButton ID="search_button" runat="server" OnClick="search_button_Click"><svg id="svg_search" width="24" height="24" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8.25998" cy="8.25995" r="7.48191" stroke="#950101" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></circle><path d="M13.4637 13.8523L16.3971 16.778" stroke="#950101" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></asp:LinkButton>
+                    </li>
+                    <li><a href="#Drama_section" onclick="goTomovies_section()">Drama</a></li>
+                    <li><a href="#Adventure_section" onclick="goToupcoming_section()">Adventure</a></li>
+                    <li><a href="#Comedy_section" onclick="goTocartoons_section()">Comedy</a></li>
+                    <li><a href="#Animation_section">Animation</a></li>
+                    <li><asp:HyperLink ID="watchlist_nav" runat="server" href="watchlist.aspx">Watchlist</asp:HyperLink></li>
+                     <li>
+                        <asp:HyperLink ID="signup_nav" class="btn btn-hover" href="signup.aspx" runat="server">
+                            <span>Sign Up</span>
+                        </asp:HyperLink>
+                        
+                    </li>
+                    <li>
+                        <asp:HyperLink ID="signin_btn" class="btn btn-hover" href="signin.aspx" runat="server">
+                            <span>Sign in</span>
+                        </asp:HyperLink>
+                        <asp:LinkButton ID="user_nav" runat="server" OnClick="user_nav_click"></asp:LinkButton>
+                        
+                    </li>
+                    <li>
+                        <asp:LinkButton ID="logout_nav" runat="server" OnClick="logout_click">Logout</asp:LinkButton>
+
+                    </li>
+                </ul>
+                <!-- MOBILE MENU TOGGLE -->
+                <div class="hamburger-menu" id="hamburger-menu">
+                    <div class="hamburger"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END NAV -->
+
+        <asp:ContentPlaceHolder ID="page_content" runat="server"></asp:ContentPlaceHolder>
+
+    <!-- FOOTER SECTION -->
+    <footer class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-md-6 col-sm-12">
+                    <div class="content">
+                        <a href="Default.aspx" class="logo">
+                            <i class='bx bx-movie-play bx-tada main-color'></i><span class="main-color">H</span>olly <span class="main-color">V</span>iew
+                        </a>
+                        <p>
+                            Welcome to Holly View, your ultimate destination for everything related to movies!, we strive to bring you an unparalleled cinematic experience right at your fingertips. At Holly View, we're passionate about movies, and our mission is to provide a comprehensive platform where film enthusiasts like you can explore, discover, and engage with the magic of the silver screen.
+                        </p>
+                        <div class="social-list">
+                            <a href="animation.aspx" class="social-item">
+                                <i class="bx bxl-facebook"></i>
+                            </a>
+                            <a href="animation.aspx" class="social-item">
+                                <i class="bx bxl-twitter"></i>
+                            </a>
+                            <a href="animation.aspx" class="social-item">
+                                <i class="bx bxl-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8 col-md-6 col-sm-12">
+                    <div class="row">
+                        <div class="col-3 col-md-6 col-sm-6">
+                            <div class="content">
+                                <p><b>Holly View</b></p>
+                                <ul class="footer-menu">
+                                    <li><a href="aboutus.aspx">About us</a></li>
+                                    <li>
+                                        <asp:LinkButton ID="my_profile_footer" runat="server" OnClick="user_nav_click">My Profile</asp:LinkButton>
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END FOOTER SECTION -->
+
+    <!-- COPYRIGHT SECTION -->
+    <div class="copyright">
+        Copyright 2023 <a href="#" target="_blank">
+            </a>
+    </div>
+    <!-- END COPYRIGHT SECTION -->
+
+    <!-- SCRIPT -->
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- OWL CAROUSEL -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+    <!-- APP SCRIPT -->
+    <script src="js/app.js"></script>
+        <asp:ContentPlaceHolder ID="own_script" runat="server"></asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

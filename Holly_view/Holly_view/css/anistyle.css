@@ -1,0 +1,57 @@
+.wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    height: 70px;
+    white-space: nowrap;
+}
+
+.focus {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: Arial;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    filter: blur(3px);
+    font-size: 65px;
+    opacity: 0.6;
+    color: #ff0000;
+}
+
+.mask {
+    position: absolute;
+    left: -5px;
+    top: -2px;
+    width: 70px;
+    font-family: Arial;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 65px;
+    clip: rect(0px, 70px, 75px, 0px);
+    color: #fff;
+    padding: 5px;
+    transform: translateX(0);
+    box-sizing: border-box;
+    animation: mask 2.5s ease infinite alternate;
+}
+
+.text {
+    transform: translateX(0);
+    animation: text 2.5s ease infinite alternate;
+}
+
+@keyframes mask {
+    to {
+        transform: translateX(355px);
+    }
+}
+
+@keyframes text {
+    to {
+        transform: translateX(-355px);
+    }
+}

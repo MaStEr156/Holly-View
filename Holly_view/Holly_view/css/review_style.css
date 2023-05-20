@@ -1,0 +1,57 @@
+.comment-box,
+.post-comment .list {
+    background: #221f1f;
+    border-radius: 6px;
+    box-shadow: 0 2px 2px #0002;
+}
+
+.comment-session {
+    width: 850px;
+    height: auto;
+}
+
+.post-comment .list {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+    .post-comment .list .user {
+        display: flex;
+        padding: 8px;
+        overflow: hidden;
+    }
+
+        .post-comment .list .user img {
+            height: 38px;
+            width: 38px;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+
+.comment-session .user_name {
+    font-weight: 500;
+}
+
+.post-comment .list .day {
+    font-size: 12px;
+}
+
+.post-comment .comment-post {
+    padding: 0 0 15px 58px;
+}
+.list {
+    position: relative;
+}
+.user_name i {
+    position: absolute;
+    right: 40px;
+    top: 16px;
+    color: rgb(245, 197, 24);
+    font-size: 23px;
+}
+.rating_number {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+}
