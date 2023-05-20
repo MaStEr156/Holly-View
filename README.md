@@ -25,7 +25,7 @@
 - [Asma Ayad](https://github.com/asma3yad)
 - [Khaled Mohamed](https://github.com/3bhafez)
 - [Soha Ahmed](https://github.com/soha131)
-- [Maram Mohamed]()
+- [Maram Mohamed](https://github.com/maram-mohamed)
 
 ## Screenshots
 ![Screenshot (88)](https://github.com/MaStEr156/Holly-View/assets/50383734/d04d29cd-a2cb-42b2-8732-1fcb779f5907)
