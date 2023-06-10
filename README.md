@@ -1,7 +1,7 @@
 # Holly-View
 
 ## About this project
-- I developed with my team a platform for discovering and reviewing movies, a user can make an account on the website and view information about movies and review them.
+- We Developed a platform for discovering and reviewing movies, a user can make an account on the website and view information about movies and review them.
 - A user can also create a personalized watchlist to save his favourite movies or movies they want to watch
 
 ## Technologies
